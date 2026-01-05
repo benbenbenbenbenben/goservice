@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
-	"path"
 	"path/filepath"
 )
 
@@ -100,7 +99,7 @@ func (s *DarwinService) GetInstallDir() string {
 }
 
 func (s *DarwinService) ServiceName() string {
-	return path.Base(s.ExecutablePath)
+	return s.ServiceDisplay
 }
 
 func (s *DarwinService) ServiceDisplayName() string {

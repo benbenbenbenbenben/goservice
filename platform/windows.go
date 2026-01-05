@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
-	"path"
 	"path/filepath"
 	"strings"
 )
@@ -91,7 +90,7 @@ func (s *WindowsService) GetInstallDir() string {
 }
 
 func (s *WindowsService) ServiceName() string {
-	return path.Base(s.ExecutablePath)
+	return s.ServiceDisplay
 }
 
 func (s *WindowsService) ServiceDisplayName() string {

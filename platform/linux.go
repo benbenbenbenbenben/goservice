@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
-	"path"
 	"path/filepath"
 )
 
@@ -101,7 +100,7 @@ func (s *LinuxService) GetInstallDir() string {
 }
 
 func (s *LinuxService) ServiceName() string {
-	return path.Base(s.ExecutablePath)
+	return s.ServiceDisplay
 }
 
 func (s *LinuxService) ServiceDisplayName() string {
