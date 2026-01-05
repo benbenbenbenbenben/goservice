@@ -17,7 +17,7 @@ const systemdServiceTemplate = `[Unit]
 Description=%s
 
 [Service]
-ExecStart=%s
+ExecStart=%s -run
 Restart=always
 User=root
 WorkingDirectory=%s
